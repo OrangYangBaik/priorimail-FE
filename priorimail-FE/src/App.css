@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+}
+
+.login-box {
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+}
+
+.login-box h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.login-box p {
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #bbbbbb;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.google-btn:hover {
+  background-color: #3367d6;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.logout-btn {
+  background-color: #ea4335;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.right-panel {
+  flex: 1;
+  background-color: #181818;
+  position: relative;
+}
+
+.overlay-graphic {
+  background: radial-gradient(circle at center, #333333 0%, #181818 100%);
+  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+}
