@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import { googleLogout } from '@react-oauth/google';
 import './Chat.css';
 
 const Chat = () => {
@@ -195,8 +196,19 @@ const Chat = () => {
       )}
 
       <div className="chat-header">
-        <h1>Email Intelligence Settings</h1>
-        <p>Configure your AI-powered email filtering preferences</p>
+        <div className="header-content">
+          <div className="header-text">
+            <h1>Email Intelligence Settings</h1>
+            <p>Configure your AI-powered email filtering preferences</p>
+          </div>
+          <button 
+            className="logout-btn"
+            onClick={handleLogout}
+            disabled={isLoading}
+          >
+            Logout
+          </button>
+        </div>
       </div>
 
       <div className="chat-content">

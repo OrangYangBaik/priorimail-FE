@@ -11,9 +11,21 @@
 }
 
 .chat-header {
-  text-align: center;
   padding: 40px 20px 20px;
   color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-text {
+  flex: 1;
+  text-align: center;
 }
 
 .chat-header h1 {
@@ -27,6 +39,34 @@
   font-size: 1.1rem;
   opacity: 0.9;
   font-weight: 400;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 100px;
+}
+
+.logout-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .chat-content {
@@ -338,8 +378,22 @@ input:checked + .toggle-slider:before {
     padding: 30px 20px 15px;
   }
   
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .header-text {
+    flex: none;
+  }
+  
   .chat-header h1 {
     font-size: 2rem;
+  }
+  
+  .logout-btn {
+    align-self: center;
   }
   
   .chat-content {
@@ -370,12 +424,25 @@ input:checked + .toggle-slider:before {
 }
 
 @media (max-width: 480px) {
+  .chat-header {
+    padding: 20px 15px 10px;
+  }
+  
+  .header-content {
+    gap: 15px;
+  }
+  
   .chat-header h1 {
     font-size: 1.75rem;
   }
   
   .chat-header p {
     font-size: 1rem;
+  }
+  
+  .logout-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
   
   .chat-content {
