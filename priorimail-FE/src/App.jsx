@@ -53,7 +53,7 @@ function LoginPage() {
       <div className="left-panel">
         <div className="login-box">
           <h1>Welcome</h1>
-          <p>Sign in to access Priorimal</p>
+          <p>Sign in to access Priorimail</p>
           {!isAuthenticated ? (
             <button className="google-btn" onClick={() => login()}>
               <img
